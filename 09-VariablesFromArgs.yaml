@@ -1,0 +1,7 @@
+- name: Variables Reading From Args
+  hosts: local
+  connection: local
+  tasks:
+  - name: Variables read From Args
+    ansible.builtin.debug:
+      msg: "Course is : {{ course }}, Duartion is : {{ duration }}, Trainer is : {{ mentor }}"
