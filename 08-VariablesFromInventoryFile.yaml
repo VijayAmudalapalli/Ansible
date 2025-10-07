@@ -1,0 +1,7 @@
+- name: Variables Reading From Inventory File
+  hosts: local
+  connection: local
+  tasks:
+  - name: Reading Variables
+    ansible.builtin.debug:
+     msg: "Course is : {{ course }}, Duartion is : {{ duartion }}, Trainer is : {{ mentor }}"
