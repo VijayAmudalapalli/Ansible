@@ -4,4 +4,4 @@
   tasks:
   - name: Reading Variables
     ansible.builtin.debug:
-     msg: "Course is : {{ course }}, Duartion is : {{ duartion }}, Trainer is : {{ mentor }}"
+     msg: "Course is : {{ course }}, Duartion is : {{ duration }}, Trainer is : {{ mentor }}"
