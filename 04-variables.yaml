@@ -1,5 +1,5 @@
 - name: Play Level Variables
-  hots: local
+  hosts: local
   connection: local
   vars:
     course: Ansible with AWS
