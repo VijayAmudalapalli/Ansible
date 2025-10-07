@@ -1,0 +1,16 @@
+- name: Variables Reading From Commapnd/Prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: UserName
+    prompt: What is your UserName ?
+    private: false
+
+  - name: PassWord
+    prompt: What is your PassWord ?
+    private: true
+  
+  tasks:
+    - name: Reading Variables
+      ansible.builtin.debug:
+        msg: "Hello, your username is : {{ UserName }}, password is : {{ PassWord }}"
