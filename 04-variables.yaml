@@ -1,0 +1,11 @@
+- name: Play Level Variables
+  hots: local
+  connection: local
+  vars:
+    course: Ansible with AWS
+    duration: 20 Hrs
+    mentor: Siva kumar Reddy M
+  tasks:
+    - name: Printing Variables
+      ansible.builtin.debug:
+        msg: "Course is : {{ course }}, Duration : {{ duration }}, Trainer : {{ Trainer }}"
