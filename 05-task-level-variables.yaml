@@ -1,0 +1,13 @@
+- name: Task Level Variables
+  hosts: local
+  connection: local
+  vars:
+    course: DevOps with AWS
+    duration: 20 Hrs
+    mentor: Siva kumar Reddy M
+  tasks:
+    - name: Printing Course Detailes
+      vars:
+        course: Ansible with AWS
+      ansible.builtin.debug:
+        msg: "Course is : {{ course }}, Duration is : {{ duration }}, Trainer is : {{ mentor }}"
