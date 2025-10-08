@@ -11,12 +11,12 @@
       Application: Payment
       Environment: Dev
     
-    # ListTags:
-    # - key: Application
-    #   value: Payment
+    ListTags:
+    - key: Application
+      value: Payment
 
-    # - key: Environment
-    #   value: Dev
+    - key: Environment
+      value: Dev
 
     
   tasks:
@@ -32,4 +32,7 @@
   - name: Convert Maps To Lists
     ansible.builtin.debug:
       msg: "{{ tags | dict2items }}"
-  
+
+  - name: Convert Lists To Maps
+    ansible.builtin.debug:
+      msg: "{{ ListTags | items2dict }}"
