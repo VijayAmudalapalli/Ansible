@@ -4,7 +4,7 @@
   vars:
     technologies: DevOps, Ansible, Shell, Linux
     Name: "Vijay Amudalapalli"
-    # gmail: VIJAY@GMAIL.COM
+    gmail: VIJAY@GMAIL.COM
     # ipaddress: 192.168.0.1
 
     tags:
@@ -43,4 +43,4 @@
 
   - name: Convert Lower Case
     ansible.builtin.debug:
-      msg: "{{ Name | lower}}"
+      msg: "{{ gmail | lower}}"
