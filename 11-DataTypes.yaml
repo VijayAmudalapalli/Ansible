@@ -20,4 +20,4 @@
   tasks:
   - name: Course Info
     ansible.builtin.debug:
-      msg: "Course is : {{ course }}, Duration is : {{ duration }}, Is Valid ? : {{ is_live }}, Tools are : {{ tools }}, Maps are : {{ concepts }}"
+      msg: "Course is : {{ course }} | Duration is : {{ duration }} | Is Valid ? : {{ is_live }} | Tools are : {{ tools }} | Maps are : {{ concepts }}"
