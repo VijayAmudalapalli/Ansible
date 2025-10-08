@@ -14,7 +14,7 @@
   
   tasks:
   - name: Variable Preference
-    vars:
-      NAME: Task Level Variable
+    # vars:
+    #   NAME: Task Level Variable
     ansible.builtin.debug:
       msg: "Name is : {{ NAME }}"
