@@ -12,7 +12,7 @@
     
     when: ansible_os_family == "RedHat"
   
-  tasks:
+  
   - name: install Nginx if RedHat
     ansible.builtin.apt:
       name: nginx
