@@ -7,9 +7,9 @@
     # gmail: VIJAY@GMAIL.COM
     # ipaddress: 192.168.0.1
 
-    # tags:
-    #   Application: Payment
-    #   Environment: Dev
+    tags:
+      Application: Payment
+      Environment: Dev
     
     # ListTags:
     # - key: Application
@@ -28,4 +28,8 @@
   - name: List The Technologies
     ansible.builtin.debug:
       msg: "Technologies are : {{ technologies | split(',') }}"
+  
+  - name: Convert Maps To Lists
+    ansible.builtin.debug:
+      msg: "{{ tags | dict2items }}"
   
