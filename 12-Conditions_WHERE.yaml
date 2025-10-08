@@ -10,4 +10,4 @@
     ansible.builtin.debug:
       msg: "Given number {{ NUMBER }} is less than 10"
   
-  where: NUMBER<10
+  when: NUMBER<10
