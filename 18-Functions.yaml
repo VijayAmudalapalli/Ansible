@@ -24,31 +24,57 @@
   - name: Printing Default Name
     ansible.builtin.debug:
       msg: "Hello {{ name | default('Vijay') }}"
-  
+# "msg": "Hello Vijay"
+
+
   - name: List The Technologies
     ansible.builtin.debug:
       msg: "Technologies are : {{ technologies | split(',') }}"
-  
+# "msg": "Technologies are : ['DevOps', ' Ansible', ' Shell', ' Linux']"
+
+
   - name: Convert Maps To Lists
     ansible.builtin.debug:
       msg: "{{ tags | dict2items }}"
+# "msg": [
+#         {
+#             "key": "Application",
+#             "value": "Payment"
+#         },
+#         {
+#             "key": "Environment",
+#             "value": "Dev"
+#         }
+#     ]
+
 
   - name: Convert Lists To Maps
     ansible.builtin.debug:
       msg: "{{ ListTags | items2dict }}"
+# "msg": {
+#         "Application": "Payment",
+#         "Environment": "Dev"
+#     }
+
 
   - name: Convert Upper Case
     ansible.builtin.debug:
       msg: "{{ Name | upper }}"
+# "msg": "VIJAY AMUDALAPALLI"
+
 
   - name: Convert Lower Case
     ansible.builtin.debug:
       msg: "{{ gmail | lower }}"
+# "msg": "vijay@gmail.com"
+
 
   - name: Check IP Valid OR Not
     ansible.builtin.debug:
       msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+# "msg": "192.168.0.1"
   
+
   - name: Grep for Root
     # ansible.builtin.command: cat /etc/passwd | grep root
     ansible.builtin.shell: cat /etc/passwd | grep root
@@ -57,6 +83,25 @@
   - name: printing command_output
     ansible.builtin.debug:
       msg: "{{ command_output }}"
+# "msg": {
+#         "changed": true,
+#         "cmd": "cat /etc/passwd | grep root",
+#         "delta": "0:00:00.009111",
+#         "end": "2025-10-08 12:05:48.399805",
+#         "failed": false,
+#         "msg": "",
+#         "rc": 0,
+#         "start": "2025-10-08 12:05:48.390694",
+#         "stderr": "",
+#         "stderr_lines": [],
+#         "stdout": "root:x:0:0:root:/root:/bin/bash\noperator:x:11:0:operator:/root:/sbin/nologin",
+#         "stdout_lines": [
+#             "root:x:0:0:root:/root:/bin/bash",
+#             "operator:x:11:0:operator:/root:/sbin/nologin"
+#         ]
+#     }
+
+
 
   - name: Redirect the Output
     ansible.builtin.command: ls -ltr > /tmp/output.txt
@@ -80,3 +125,18 @@
   - name: printing redirect_output shell
     ansible.builtin.debug:
       msg: "{{ redirect_output }}"
+
+# "msg": {
+#         "changed": true,
+#         "cmd": "ls -ltr > /tmp/output.txt",
+#         "delta": "0:00:00.006922",
+#         "end": "2025-10-08 12:05:49.134509",
+#         "failed": false,
+#         "msg": "",
+#         "rc": 0,
+#         "start": "2025-10-08 12:05:49.127587",
+#         "stderr": "",
+#         "stderr_lines": [],
+#         "stdout": "",
+#         "stdout_lines": []
+#     }
