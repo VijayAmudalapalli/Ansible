@@ -11,6 +11,6 @@
       state: "{{ item.State }}"
     
     loop:
-    - { Name: nginx, State: absent}
-    - { Name: mysql, state: absent}
-    - { Name: zip, State: present}
+    - { name: nginx, state: absent}
+    - { name: mysql, state: absent}
+    - { name: zip, state: present}
