@@ -3,7 +3,7 @@
   connection: local
   vars:
     # technologies: DevOps, Ansible, Shell, Linux
-    name: "Vijay Amudalapalli"
+    NAME: "Vijay Amudalapalli"
     # gmail: VIJAY@GMAIL.COM
     # ipaddress: 192.168.0.1
 
@@ -23,4 +23,4 @@
 
     - name: Printing Default Name
       ansible.builtin.debug:
-        msg: "Hello {{ name | default('Vijay') }}"
+        msg: "Hello {{ NAME | default('Vijay') }}"
