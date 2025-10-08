@@ -7,15 +7,15 @@
     duration: 250
     is_live: true
   
-  tools:
-  - Ansible
-  - Linux
-  - AWS
-  - DevOps
+    tools:
+    - Ansible
+    - Linux
+    - AWS
+    - DevOps
 
-  concepts:
-    cloud: AWS
-    cm: Ansible
+    concepts:
+      cloud: AWS
+      cm: Ansible
   
   tasks:
   - name: Course Info
