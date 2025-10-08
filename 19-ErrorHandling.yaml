@@ -1,0 +1,11 @@
+- name: Checking User Exist or Not
+  hosts: local
+  connection: local
+
+  become: yes
+
+  tasks:
+  - name: user existance check
+    ansible.builtin.command: id roboshop
+    register: user_check
+  
