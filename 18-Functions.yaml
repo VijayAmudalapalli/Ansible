@@ -61,7 +61,15 @@
   - name: Redirect the Output
     ansible.builtin.command: ls -ltr > /tmp/output.txt
     register: redirect_output
+    ignore_erros: true
   
-  - name: printing redirect_output
+  - name: printing redirect_output command
     ansible.builtin.debug:
       msg: "{{ redirect_output }}"
+  
+#It is failed due to using of Command instead of Shell, here is the LOG   TASK [Redirect the Output] ******************************************************************************************************************************
+# fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["ls", "-ltr", ">", "/tmp/output.txt"], "delta": "0:00:00.007470", "end": "2025-10-08 11:52:50.718889", "msg": "non-zero return code", "rc": 2, "start": "2025-10-08 11:52:50.711419", "stderr": "ls: cannot access '>': No such file or directory\nls: cannot access '/tmp/output.txt': No such file or directory", "stderr_lines": ["ls: cannot access '>': No such file or directory", "ls: cannot access '/tmp/output.txt': No such file or directory"], "stdout": "", "stdout_lines": []}
+
+# PLAY RECAP **********************************************************************************************************************************************
+# localhost                  : ok=10   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+
