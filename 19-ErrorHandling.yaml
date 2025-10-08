@@ -12,8 +12,8 @@
   
   - name: printing
     ansible.builtin.debug:
-      msg: "User : {{ user_check }}"
+      msg: "{{ user_check }}"
 
-  - name: user add
-    ansible.builtin.command: uaseadd roboshop
-    when: user_check.rc !=0
+  - name: creater user
+    ansible.builtin.command: useradd roboshop
+    when: user_check.rc != 0
