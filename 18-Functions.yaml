@@ -1,9 +1,9 @@
 - name: Functions
   hosts: local
   connection: local
-  # vars:
+  vars:
     # technologies: DevOps, Ansible, Shell, Linux
-    # NAME: "Vijay Amudalapalli"
+    name: "Vijay Amudalapalli"
     # gmail: VIJAY@GMAIL.COM
     # ipaddress: 192.168.0.1
 
