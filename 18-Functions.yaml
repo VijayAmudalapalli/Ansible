@@ -3,7 +3,7 @@
   connection: local
   vars:
     technologies: DevOps, Ansible, Shell, Linux
-    # name: "Vijay Amudalapalli"
+    name: "Vijay Amudalapalli"
     # gmail: VIJAY@GMAIL.COM
     # ipaddress: 192.168.0.1
 
@@ -36,3 +36,7 @@
   - name: Convert Lists To Maps
     ansible.builtin.debug:
       msg: "{{ ListTags | items2dict }}"
+
+  - name: Convert Upper Case
+    ansible.builtin.debug:
+      msg: "{{ name | upper}}"
