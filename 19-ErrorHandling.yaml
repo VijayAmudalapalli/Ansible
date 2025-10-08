@@ -13,7 +13,30 @@
   - name: printing
     ansible.builtin.debug:
       msg: "{{ user_check }}"
+# TASK [user existance check] *****************************************************************************************************************************
+# fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["id", "roboshop"], "delta": "0:00:00.007211", "end": "2025-10-08 12:32:49.498119", "msg": "non-zero return code", "rc": 1, "start": "2025-10-08 12:32:49.490908", "stderr": "id: ‘roboshop’: no such user", "stderr_lines": ["id: ‘roboshop’: no such user"], "stdout": "", "stdout_lines": []}
+# ...ignoring
 
   - name: creater user
     ansible.builtin.command: useradd roboshop
     when: user_check.rc != 0
+
+# "msg": {
+#         "changed": true,
+#         "cmd": [
+#             "id",
+#             "roboshop"
+#         ],
+#         "delta": "0:00:00.007211",
+#         "end": "2025-10-08 12:32:49.498119",
+#         "failed": true,
+#         "msg": "non-zero return code",
+#         "rc": 1,
+#         "start": "2025-10-08 12:32:49.490908",
+#         "stderr": "id: ‘roboshop’: no such user",
+#         "stderr_lines": [
+#             "id: ‘roboshop’: no such user"
+#         ],
+#         "stdout": "",
+#         "stdout_lines": []
+#     }
