@@ -7,8 +7,8 @@
   tasks:
   - name: Installing OR UnInstalling Packages in loop
     ansible.builtin.package:
-      name: "{{ item.Name }}"
-      state: "{{ item.State }}"
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     
     loop:
     - { name: nginx, state: absent}
