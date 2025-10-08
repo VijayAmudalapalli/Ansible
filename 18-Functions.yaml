@@ -23,4 +23,4 @@
 
   - name: Printing Default Name
     ansible.builtin.debug:
-      msg: "Hello {{ NAME | default('Vijay') }}"
+      msg: "Hello {{ name | default('Vijay') }}"
