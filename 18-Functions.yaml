@@ -2,21 +2,21 @@
   hosts: local
   connection: local
   vars:
-    technologies: DevOps, Ansible, Shell, Linux
+    # technologies: DevOps, Ansible, Shell, Linux
     name: "Vijay Amudalapalli"
-    gmail: VIJAY@GMAIL.COM
-    ipaddress: 192.168.0.1
+    # gmail: VIJAY@GMAIL.COM
+    # ipaddress: 192.168.0.1
 
-    tags:
-      Application: Payment
-      Environment: Dev
+    # tags:
+    #   Application: Payment
+    #   Environment: Dev
     
-    ListTags:
-    - key: Application
-      value: Payment
+    # ListTags:
+    # - key: Application
+    #   value: Payment
 
-    - key: Environment
-      value: Dev
+    # - key: Environment
+    #   value: Dev
 
     
     tasks:
@@ -24,4 +24,3 @@
     - name: Printing Default Name
       ansible.builtin.debug:
         msg: "Hello {{ name | default('Vijay') }}"
-    
