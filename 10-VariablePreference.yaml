@@ -7,10 +7,10 @@
   # vars_files:
   # - course.yaml
 
-  vars_prompt:
-  - name: NAME
-    prompt: What is your Name ?
-    private: false
+  # vars_prompt:
+  # - name: NAME
+  #   prompt: What is your Name ?
+  #   private: false
   
   tasks:
   - name: Variable Preference
@@ -18,3 +18,10 @@
     #   NAME: Task Level Variable
     ansible.builtin.debug:
       msg: "Name is : {{ NAME }}"
+
+
+# Args
+# Task Level
+# File Level
+# Prompt Level
+# 
