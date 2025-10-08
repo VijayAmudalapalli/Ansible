@@ -1,9 +1,9 @@
 - name: Functions
   hosts: local
   connection: local
-  vars:
+  # vars:
     # technologies: DevOps, Ansible, Shell, Linux
-    NAME: "Vijay Amudalapalli"
+    # NAME: "Vijay Amudalapalli"
     # gmail: VIJAY@GMAIL.COM
     # ipaddress: 192.168.0.1
 
@@ -19,8 +19,8 @@
     #   value: Dev
 
     
-    tasks:
+  tasks:
 
-    - name: Printing Default Name
-      ansible.builtin.debug:
-        msg: "Hello {{ NAME | default('Vijay') }}"
+  - name: Printing Default Name
+    ansible.builtin.debug:
+      msg: "Hello {{ NAME | default('Vijay') }}"
