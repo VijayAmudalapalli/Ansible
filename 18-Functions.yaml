@@ -61,7 +61,7 @@
   - name: Redirect the Output
     ansible.builtin.command: ls -ltr > /tmp/output.txt
     register: redirect_output
-    # ignore_erros: true
+    ignore_erros: true
   
   - name: printing redirect_output command
     ansible.builtin.debug:
@@ -73,3 +73,10 @@
 # PLAY RECAP **********************************************************************************************************************************************
 # localhost                  : ok=10   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
 
+  - name: Redirect the Output shell
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt
+    register: redirect_output
+  
+  - name: printing redirect_output shell
+    ansible.builtin.debug:
+      msg: "{{ redirect_output }}"
