@@ -1,0 +1,16 @@
+- name: Loop
+  hosts: local
+  connection: local
+  
+  become: yes
+
+  tasks:
+  - name: Installing OR UnInstalling Packages in loop
+    ansible.builtin.package:
+      name: "{{ item.Name }}"
+      state: "{{ item.State }}"
+    
+    loop:
+    - { Name: nginx, State: absent}
+    - { Name: mysql, state: absent}
+    - { Name: zip, State: present}
