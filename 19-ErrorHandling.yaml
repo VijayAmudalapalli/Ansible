@@ -9,3 +9,6 @@
     ansible.builtin.command: id roboshop
     register: user_check
   
+  - name: printing
+    ansible.builtin.debug:
+      msg: "User : {{ user_check }}"
