@@ -5,7 +5,7 @@
     technologies: DevOps, Ansible, Shell, Linux
     Name: "Vijay Amudalapalli"
     gmail: VIJAY@GMAIL.COM
-    # ipaddress: 192.168.0.1
+    ipaddress: 192.168.0.1
 
     tags:
       Application: Payment
@@ -39,8 +39,13 @@
 
   - name: Convert Upper Case
     ansible.builtin.debug:
-      msg: "{{ Name | upper}}"
+      msg: "{{ Name | upper }}"
 
   - name: Convert Lower Case
     ansible.builtin.debug:
-      msg: "{{ gmail | lower}}"
+      msg: "{{ gmail | lower }}"
+
+  - name: Check IP Valid OR Not
+    ansible.builtin.debug:
+      msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+
